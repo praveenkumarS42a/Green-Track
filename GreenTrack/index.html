@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="GT LOGO.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-Track - Waste Segregation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Green-Track</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+                <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <section id="home">
+            <div class="intro card">
+                <h2>Welcome to Green-Track</h2>
+                <p>Your efficient partner in waste segregation.</p>
+                <div class="button-container">
+                    <button onclick="location.href = 'signin.html'" class="button">Sign In  /  Sign Up</button>
+                  
+                </div>
+            </div>
+        </section>
+        <section id="services" class="hidden">
+            <div class="card">
+                <h2>Our Services</h2>
+                <p>We offer state-of-the-art waste segregation solutions:</p>
+                <ul>
+                    <li>Automated waste sorting</li>
+                    <li>Customized recycling plans</li>
+                    <li>Consulting services for waste management</li>
+                </ul>
+            </div>
+        </section>
+        <section id="about" class="hidden">
+            <div class="card">
+                <h2>About Us</h2>
+                <p>Green-Track is committed to sustainable waste management. Our team of experts uses advanced technology to ensure efficient waste segregation and recycling.</p>
+            </div>
+        </section>
+        <section id="contact" class="hidden">
+            <div class="card">
+                <h2>Contact Us</h2>
+                <p>Email: contact@green-track.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Green Street, Clean City, Eco Country</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Green-Track. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

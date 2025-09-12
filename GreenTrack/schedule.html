@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="GT LOGO.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Pickup Schedule</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-size: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2e7d32;
+            color: #fff;
+            padding: 10px 20px 10px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .branding {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .nav-toggle {
+            cursor: pointer;
+            background-color: #1b5e20;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #2e7d32;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #1b5e20;
+        }
+
+        main {
+            flex: 1;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 2px solid rgb(76, 18, 18);
+            background-color: rgb(241, 215, 203);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(to right, #633c2e, #2e7d32);
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: linear-gradient(to right, #f9f9f9, #f1f1f1);
+        }
+
+        .summary {
+            font-size: 16px;
+        }
+
+        .summary p {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #2e7d32;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input[type="text"], .input-group input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .community-button {
+            background-color: #1b5e20;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .community-button:hover {
+            background-color: #0d3d14;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="branding">
+                <img src="GT LOGO.jpg" alt="GreenFlag" class="logo">
+                <h1 style="font-family: Comic Sans MS">Green Track</h1>
+            </div>
+            <nav>
+                <div class="nav-toggle" onclick="toggleNav()">Menu</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </nav>
+            <a href="https://chat.whatsapp.com/B9aI8xrdsk91K3GrtwIHYn" class="community-button">Join our community</a>
+        </header>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type of Waste</th>
+                        <th>Quantity (kg)</th>
+                        <th>Worth (Points)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Metallic Waste</b></td>
+                        <td><input type="number" id="metallicWaste" value="0" min="0" step="0.1" onchange="calculateAmount()"></td>
+                        <td>2.00/kg</td>
+                    </tr>
+                    <tr>
+                        <td><b>Glass Waste</b></td>
+                        <td><input type="number" id="glassWaste" value="0" min="0" step="0.1" onchange="calculateAmount()"></td>
+                        <td>1.50/kg</td>
+                    </tr>
+                    <tr>
+                        <td><b>Plastic Waste</b></td>
+                        <td><input type="number" id="plasticWaste" value="0" min="0" step="0.1" onchange="calculateAmount()"></td>
+                        <td>1.50/kg</td>
+                    </tr>
+                    <tr>
+                        <td><b>Paper Waste</b></td>
+                        <td><input type="number" id="paperWaste" value="0" min="0" step="0.1" onchange="calculateAmount()"></td>
+                        <td>1.00/kg</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="input-group">
+                <label for="pickupDate">Schedule Date</label>
+                <input type="date" id="pickupDate" required>
+            </div>
+            <div class="input-group">
+                <label for="pickupAddress">Pickup Address</label>
+                <input type="text" id="pickupAddress" required>
+            </div>
+            <div class="summary">
+                <p><strong>Points Received:</strong> <span id="amountPayable">0.00</span> Points</p>
+                <button onclick="schedulePickup()">Schedule Pickup</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function calculateAmount() {
+            const metallicWaste = parseFloat(document.getElementById('metallicWaste').value) || 0;
+            const glassWaste = parseFloat(document.getElementById('glassWaste').value) || 0;
+            const plasticWaste = parseFloat(document.getElementById('plasticWaste').value) || 0;
+            const paperWaste = parseFloat(document.getElementById('paperWaste').value) || 0;
+
+            const metallicRate = 2.00;
+            const glassRate = 1.50;
+            const plasticRate = 1.50;
+            const paperRate = 1.00;
+
+            const totalAmount = (metallicWaste * metallicRate) +
+                                (glassWaste * glassRate) +
+                                (plasticWaste * plasticRate) +
+                                (paperWaste * paperRate);
+
+            document.getElementById('amountPayable').textContent = totalAmount.toFixed(2);
+        }
+
+        function schedulePickup() {
+            const pickupDate = document.getElementById('pickupDate').value;
+            const pickupAddress = document.getElementById('pickupAddress').value;
+
+            if (!pickupDate || !pickupAddress) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            alert("Pickup scheduled successfully!");
+            window.location.href = 'admin.html'; // Redirect to index.html
+        }
+    </script>
+</body>
+</html>

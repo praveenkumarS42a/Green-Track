@@ -1,0 +1,43 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f5f7;
+}
+
+header {
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #06470a, #0d6111); /* Updated header background color with gradient */
+    color: white; /* White text */
+}
+
+.navbar-brand, .nav-link {
+    color: white !important; /* Ensure all header text is white */
+}
+
+footer {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #06470a, #0d6111); /* Updated footer background color with gradient */
+    color: white; /* White text */
+}
+
+footer a {
+    color: white !important; /* Ensure footer links are white */
+}
+
+.container {
+    max-width: 600px;
+}
+
+h2 {
+    color: #06470a; /* Updated heading color */
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h5 {
+    color: white;
+}

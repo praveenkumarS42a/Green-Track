@@ -1,0 +1,181 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #2e3b2f; 
+    position: relative;
+    color: #f0f0f0; 
+    
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Electrical-Electronic-Assets-Disposition.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: white;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #4CAF50;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 150px auto 0;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 100px; /* Add padding to the bottom of the container to make space for the footer */
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 250px);
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.intro p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent black background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0; /* Ensure text is readable */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 20px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #a8e063;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+p, ul {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
