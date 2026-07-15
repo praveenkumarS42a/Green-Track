@@ -23,7 +23,7 @@ GreenTrack is a waste segregation and recycling support project that includes:
 
 ## Requirements
 
-- Python 3.8+ recommended
+- Python 3.8+  is recommended
 - `streamlit`
 - `tensorflow`
 - `numpy`
