@@ -1,0 +1,39 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+ehthumbs.db
+
+# node modules
+node_modules/
